@@ -5,9 +5,9 @@ variable "network" {
 
 locals {
   subnets = cidrsubnets(var.network, 1, 2, 2)
-  first = cidrsubnets(local.subnets[0], 1, 4)
-  second = cidrsubnets(local.subnets[1], 1, 4)
-  third = cidrsubnets(local.subnets[2], 1, 4)
+  first = cidrsubnets(local.subnets[0], 1, 3)
+  second = cidrsubnets(local.subnets[1], 1, 2)
+  third = cidrsubnets(local.subnets[2], 1, 3)
 }
 
 output "results" {
